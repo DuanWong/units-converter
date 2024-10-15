@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr ">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Duan Wang">
+    <meta name="description" content="My web project">
+    <meta name="keyword" content="html, css, web, seo, web development">
+    <title>Converter</title>
+    <link rel="icon" href="./asserts/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" media="all">
+    <link rel="stylesheet" href="./asserts/css/style.css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" >
+    <script src="./asserts/js/index.js" defer></script>
+  </head>
+  <body class="theme">
+    <header>
+      <div class="container flex space">
+        <h1>CONVERTER</h1>
+        <div class="nav-bar flex">
+            <a href="#">Projects</a>
+            <a href="#">About me</a>
+            <a href="#">Contact</a>    
+        </div>
+      </div>
+    </header>
+    <main class="container">
+       <h2 class="title">Temperature converter</h2>
+       <form class="">
+          <div class="input flex">
+            <input class="input-box" type="text" placeholder="Plese type in a number">
+            <input class="input-button calculate" type="submit" value="Convert">
+          </div>
+          <div class="choice flex">
+            <div>
+                <input type="radio" name="conversion" value="toFah">
+                <label for="toFah">To Fahrenheit</label>
+            </div>
+            <div>
+                <input type="radio" name="conversion" value="toCel">
+                <label for="toCel">To Celsius</label>
+            </div>
+          </div>
+          <div class="output">
+            <input type="text" id="output" 
+            placeholder="Result will appear here" 
+            readonly>
+          </div>
+       </form>
+       <button class="change">Dark mode</button>
+    </main>
+  </body>
+</html>
