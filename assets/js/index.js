@@ -63,9 +63,7 @@ calculate.addEventListener('click', function() {
     }
 });
 
-/*
 inputBox.addEventListener('focus', function() {
     output.innerText = '';
     inputBox.value = '';
 });
-*/
