@@ -3,10 +3,10 @@
 const change = document.querySelector('.change');
 const theme = document.querySelector('.theme');
 const title = document.querySelector('.title');
-const inputBox = document.querySelector('.input-box');
+const inputBox = document.querySelector('#input-box');
 const choice = document.querySelector('.choice');
 const output = document.querySelector('.output');
-const calculate = document.querySelector('.calculate');
+const calculate = document.querySelector('#calculate');
 const radios = document.getElementsByName('conversion');
 
 change.addEventListener('click', function() {
@@ -36,8 +36,8 @@ change.addEventListener('click', function() {
 function isNumber(inputBox) {
     if (inputBox.length > 0 && !isNaN(inputBox)) {
         return true;
-
-    } else {return false;
+    } else {
+        return false;
     }
 }
 
@@ -63,7 +63,9 @@ calculate.addEventListener('click', function() {
     }
 });
 
+/*
 inputBox.addEventListener('focus', function() {
     output.innerText = '';
     inputBox.value = '';
 });
+*/
