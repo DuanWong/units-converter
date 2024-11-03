@@ -27,30 +27,32 @@
         </div>
       </div>
     </header>
-    <main class="container">
-       <h2 class="title">Temperature converter</h2>
-       <form class="">
-          <div class="input flex">
-            <input id="input-box" type="text" placeholder="Plese type in a number">
-            <input id="calculate" type="button" value="Convert">
-          </div>
-          <div class="choice flex">
-            <div>
-                <input id="toFah" type="radio" name="conversion" value="toFah" checked>
-                <label id="toFahLabel" for="toFah">To Fahrenheit</label>
-            </div>
-            <div>
-                <input id="toCel" type="radio" name="conversion" value="toCel">
-                <label id="toCelLabel" for="toCel">To Celsius</label>
-            </div>
-          </div>
-          <div class="output">
-            <input id="result" type="text"  
-            placeholder="Result will appear here" 
-            readonly>
-          </div>
-       </form>
-       <button class="change">Dark mode</button>
+    <main class="container grid">
+      <div class="grid">
+          <h2 class="title">Temperature converter</h2>
+          <form class="">
+              <div class="input flex">
+                <input id="input-box" type="text" placeholder="Please enter a temperature value">
+                <input id="calculate" type="button" value="Convert">
+              </div>
+              <div class="choice flex">
+                <div>
+                    <input id="toFah" type="radio" name="conversion" value="toFah" checked>
+                    <label id="toFahLabel" for="toFah">To Fahrenheit</label>
+                </div>
+                <div>
+                    <input id="toCel" type="radio" name="conversion" value="toCel">
+                    <label id="toCelLabel" for="toCel">To Celsius</label>
+                </div>
+              </div>
+              <div class="output">
+                <input id="result" type="text"  
+                placeholder="Result will appear here" 
+                readonly>
+              </div>
+          </form>
+      </div>
+      <button class="change">Dark mode</button>
     </main>
   </body>
 </html>

@@ -15,12 +15,17 @@ body {
 /*--------------------------------------------*/
 
 .container {
-width: min(100% - 30px, 1200px);
-margin-inline: auto;
+    width: min(100% - 30px, 1200px);
+    margin-inline: auto;
 }
 
 .flex {
-display: flex;
+    display: flex;
+}
+
+.grid {
+    display: grid;
+    place-items: center;
 }
 
 .space {
@@ -54,6 +59,11 @@ header {
 /*Main                                        */
 /*--------------------------------------------*/
 
+main {
+    width: auto;
+    height: calc(100vh - 72px);
+}
+
 button {
     position: fixed;
     inset: auto 40px 40px auto;
@@ -63,10 +73,6 @@ button {
     background-color: var(--app-dark-background);
     font-size: 16px;
     color:#fff;
-}
-
-h2 {
-    margin-top: 50px;
 }
 
 .input{
