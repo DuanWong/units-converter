@@ -6,7 +6,7 @@
     <meta name="author" content="Duan Wang">
     <meta name="description" content="My web project">
     <meta name="keyword" content="html, css, web, seo, web development">
-    <title>Temperature Converter</title>
+    <title>Unit Converters</title>
     <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" media="all">
@@ -18,41 +18,101 @@
   </head>
   <body class="theme">
     <header>
-      <div class="container flex space">
-        <h1>CONVERTER</h1>
-        <div class="nav-bar flex">
-            <a href="#">Projects</a>
-            <a href="#">About me</a>
-            <a href="#">Contact</a>    
-        </div>
+      <div class="container">
+        <h1>Unit Converters</h1>
       </div>
     </header>
     <main class="container grid">
-      <div class="grid">
-          <h2 class="title">Temperature converter</h2>
-          <form class="">
-              <div class="input flex">
-                <input id="input-box" type="text" placeholder="Please enter a temperature value">
-                <input id="calculate" type="button" value="Convert">
+      <section class="converters-container">
+        <section class="block grid">
+          <h2>℉ <--> ℃</h2>
+          <form>
+              <div class="enter-box flex">
+                <input id="enter-temp" class="temp-input" type="text" placeholder="Please enter a temperature value">
+                <input id="temp-button" class="temp-convert" type="button" value="Convert">
               </div>
-              <div class="choice flex">
+              <div class="temp-choice flex">
                 <div>
-                    <input id="toFah" type="radio" name="conversion" value="toFah" checked>
-                    <label id="toFahLabel" for="toFah">To Fahrenheit</label>
+                  <input id="cel" type="radio" name="temp-unit" value="to-cel" checked>
+                  <label id="cel-label" for="cel">To ℃</label>
                 </div>
                 <div>
-                    <input id="toCel" type="radio" name="conversion" value="toCel">
-                    <label id="toCelLabel" for="toCel">To Celsius</label>
+                    <input id="fah" type="radio" name="temp-unit" value="to-fah">
+                    <label id="fah-label" for="fah">To ℉</label>
                 </div>
               </div>
-              <div class="output">
-                <input id="result" type="text"  
-                placeholder="Result will appear here" 
-                readonly>
-              </div>
+              <input id="result-temp" class="temp-output" type="text"  
+              placeholder="Result will appear here" 
+              readonly>
           </form>
-      </div>
-      <button class="change">Dark mode</button>
+        </section>
+        <section class="block grid">
+          <h2>inch <--> cm</h2>
+          <form>
+              <div class="enter-box flex">                
+                <input id="enter-length" class="length-input" type="text" placeholder="Please enter a length value">
+                <input id="length-button" class="length-convert" type="button" value="Convert">
+              </div>
+              <div class="length-choice flex">
+                <div>
+                    <input id="cm" type="radio" name="length-unit" value="to-cm" checked>
+                    <label id="cm-label" for="cm">To cm</label>
+                </div>
+                <div>
+                    <input id="inch" type="radio" name="length-unit" value="to-inch">
+                    <label id="inch-label" for="inch">To inch</label>
+                </div>
+              </div>
+              <input id="result-length" class="length-output" type="text"  
+              placeholder="Result will appear here" 
+              readonly>
+          </form>
+        </section>
+        <section class="block grid">
+          <h2>ft² <--> m²</h2>
+          <form>
+              <div class="enter-box flex">                
+                <input id="enter-area" class="area-input" type="text" placeholder="Please enter a area value">
+                <input id="area-button" class="area-convert" type="button" value="Convert">
+              </div>
+              <div class="area-choice flex">
+                <div>
+                    <input id="square-meters" type="radio" name="area-unit" value="to-square-meters" checked>
+                    <label id="square-meters-label" for="square-meters">To m²</label>
+                </div>
+                <div>
+                    <input id="square-foot" type="radio" name="area-unit" value="to-square-foot">
+                    <label id="square-foot-label" for="square-foot">To ft²</label>
+                </div>
+              </div>
+              <input id="result-area" class="area-output" type="text"  
+              placeholder="Result will appear here" 
+              readonly>
+          </form>
+        </section>
+        <section class="block grid">
+          <h2>lb <--> kg</h2>
+          <form>
+              <div class="enter-box flex">                
+                <input id="enter-weight" class="weight-input" type="text" placeholder="Please enter a weight value">
+                <input id="weight-button" class="weight-convert" type="button" value="Convert">
+              </div>
+              <div class="weight-choice flex">
+                <div>
+                    <input id="kg" type="radio" name="weight-unit" value="to-kg" checked>
+                    <label id="kg-label" for="kg">To kg</label>
+                </div>
+                <div>
+                    <input id="lb" type="radio" name="weight-unit" value="to-lb">
+                    <label id="lb-label" for="lb">To lb</label>
+                </div>
+              </div>
+              <input id="result-weight" class="weight-output" type="text"  
+              placeholder="Result will appear here" 
+              readonly>
+          </form>
+        </section>
+      </section>
     </main>
   </body>
 </html>

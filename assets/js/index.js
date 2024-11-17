@@ -1,69 +1,169 @@
 'use strict';
 
-const change = document.querySelector('.change');
-const theme = document.querySelector('.theme');
-const title = document.querySelector('.title');
-const inputBox = document.querySelector('#input-box');
-const choice = document.querySelector('.choice');
-const output = document.querySelector('.output');
-const calculate = document.querySelector('#calculate');
-const radios = document.getElementsByName('conversion');
+/*--------------------------------------------*/
+/*isNumber                                    */
+/*--------------------------------------------*/
 
-change.addEventListener('click', function() {
-  this.classList.toggle('Dark');
-
-  if (this.classList.contains('Dark')) {
-    this.innerText = 'Light mode';
-    theme.style.backgroundColor = '#181721';
-    this.style.backgroundColor = '#efedf5';
-    this.style.color = '#000';
-    title.style.color = '#fff';
-    inputBox.style.backgroundColor = '#181721';
-    inputBox.style.color = '#fff';
-    choice.style.color = '#fff';
-  } else {
-    this.innerText = 'Dark mode';
-    theme.style.backgroundColor = '#efedf5';
-    this.style.backgroundColor = '#181721';
-    this.style.color = '#fff';
-    title.style.color = '#000';
-    inputBox.style.backgroundColor = '#efedf5';
-    inputBox.style.color = '#000';
-    choice.style.color = '#000';
-  }
-});
-
-function isNumber(inputBox) {
-    if (inputBox.length > 0 && !isNaN(inputBox)) {
+function isNumberTemp(value) {
+    if (!isNaN(value) && value.trim() !== '') {
         return true;
     } else {
         return false;
     }
 }
 
-calculate.addEventListener('click', function() {
-    let a = inputBox.value.trim();
+function isNumber(value) {
+    if (value > 0 && !isNaN(Number(value))) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/*--------------------------------------------*/
+/*Temperature converter                       */
+/*--------------------------------------------*/
+
+const tempInput = document.querySelector('.temp-input');
+const tempOutput = document.querySelector('.temp-output');
+const tempConvert = document.querySelector('.temp-convert');
+const tempRadios = document.getElementsByName('temp-unit');
+
+tempConvert.addEventListener('click', function() {
+    let a = tempInput.value.trim();
     let selectedValue;
 
-    for (const radio of radios) {
+    for (const radio of tempRadios) {
         if (radio.checked) {
             selectedValue = radio.value; 
             break;
         }
     }
 
-    if (isNumber(a) && selectedValue === 'toFah') {
+    if (isNumberTemp(a) && selectedValue === 'to-fah') {
         let result = a * 1.8 + 32;
-        output.innerText = `${a} ℃ = ${result.toFixed(2)} ℉`;
-    } else if (isNumber(a) && selectedValue === 'toCel') {
+        tempOutput.value = `${a} ℃ = ${result.toFixed(2)} ℉`;
+    } else if (isNumberTemp(a) && selectedValue === 'to-cel') {
         let result = (a - 32) / 1.8;
-        output.innerText = `${a} ℉ = ${result.toFixed(2)} ℃`;
+        tempOutput.value = `${a} ℉ = ${result.toFixed(2)} ℃`;
     } else {
-        output.innerText = 'Please enter a valid number';
+        tempOutput.value = 'Please enter a valid number';
     }
+
+    tempInput.value = '';
 });
 
-inputBox.addEventListener('focus', function() {
-    output.innerText = '';
-    inputBox.value = '';
+tempInput.addEventListener('focus', function() {
+    tempOutput.value = '';
+});
+
+/*--------------------------------------------*/
+/*Length converter                            */
+/*--------------------------------------------*/
+
+const lengthInput = document.querySelector('.length-input');
+const lengthOutput = document.querySelector('.length-output');
+const lengthConvert = document.querySelector('.length-convert');
+const lengthRadios = document.getElementsByName('length-unit');
+
+lengthConvert.addEventListener('click', function() {
+    let a = lengthInput.value.trim();
+    let selectedValue;
+
+    for (const radio of lengthRadios) {
+        if (radio.checked) {
+            selectedValue = radio.value; 
+            break;
+        }
+    }
+
+    if (isNumber(a) && selectedValue === 'to-cm') {
+        let result = a * 2.54;
+        lengthOutput.value = `${a} inch = ${result.toFixed(2)} cm`;
+    } else if (isNumber(a) && selectedValue === 'to-inch') {
+        let result = a * 0.3937;
+        lengthOutput.value = `${a} cm = ${result.toFixed(2)} inch`;
+    } else {
+        lengthOutput.value = 'Please enter a valid number';
+    }
+
+    lengthInput.value = '';
+});
+
+lengthInput.addEventListener('focus', function() {
+    lengthOutput.value = '';
+});
+
+/*--------------------------------------------*/
+/*Area converter                            */
+/*--------------------------------------------*/
+
+const areaInput = document.querySelector('.area-input');
+const areaOutput = document.querySelector('.area-output');
+const areaConvert = document.querySelector('.area-convert');
+const areaRadios = document.getElementsByName('area-unit');
+
+areaConvert.addEventListener('click', function() {
+    let a = areaInput.value.trim();
+    let selectedValue;
+
+    for (const radio of areaRadios) {
+        if (radio.checked) {
+            selectedValue = radio.value; 
+            break;
+        }
+    }
+
+    if (isNumber(a) && selectedValue === 'to-square-meters') {
+        let result = a * 0.092903;
+        areaOutput.value = `${a} ft² = ${result.toFixed(2)} m²`;
+    } else if (isNumber(a) && selectedValue === 'to-square-foot') {
+        let result = a * 10.7639;
+        areaOutput.value = `${a} m² = ${result.toFixed(2)} ft²`;
+    } else {
+        areaOutput.value = 'Please enter a valid number';
+    }
+
+    areaInput.value = '';
+});
+
+areaInput.addEventListener('focus', function() {
+    areaOutput.value = '';
+});
+
+/*--------------------------------------------*/
+/*Weight converter                            */
+/*--------------------------------------------*/
+
+const weightInput = document.querySelector('.weight-input');
+const weightOutput = document.querySelector('.weight-output');
+const weightConvert = document.querySelector('.weight-convert');
+const weightRadios = document.getElementsByName('weight-unit');
+
+weightConvert.addEventListener('click', function() {
+    let a = weightInput.value.trim();
+    let selectedValue;
+
+    for (const radio of weightRadios) {
+        if (radio.checked) {
+            selectedValue = radio.value; 
+            break;
+        }
+    }
+
+    if (isNumber(a) && selectedValue === 'to-kg') {
+        let result = a * 0.45359237;
+        weightOutput.value = `${a} lb = ${result.toFixed(2)} kg`;
+    } else if (isNumber(a) && selectedValue === 'to-lb') {
+        let result = a * 2.20462;
+        weightOutput.value = `${a} kg = ${result.toFixed(2)} lb`;
+    } else {
+        weightOutput.value = 'Please enter a valid number';
+    }
+
+    weightInput.value = '';
+});
+
+weightInput.addEventListener('focus', function() {
+    weightOutput.value = '';
 });

@@ -1,13 +1,13 @@
 :root {
     --app-dark-background: #181721;
     --app-light-background: #efedf5;
-    --app-header-background: #6b4de3;
+    --app-button-background: #6b4de3;
+    --app-button-hover-background: #866fe4;
     --app-output-background: #dfdee3;
 }
   
 body {
     background-color: var(--app-light-background);
-    transition: all 0.25s ease-in-out;
 }
 
 /*--------------------------------------------*/
@@ -40,8 +40,8 @@ header {
     height: 72px;
     align-items: center;
     line-height: 72px;
-    color:#fff;
-    background-color: var(--app-header-background);
+    color: var(--app-button-background);
+    background-color: #fff;
 
     h1 {
         font-size: 25px;
@@ -64,56 +64,63 @@ main {
     height: calc(100vh - 72px);
 }
 
-button {
-    position: fixed;
-    inset: auto 40px 40px auto;
-    width: 160px;
-    height: 40px;
-    border-radius: 30px;
-    background-color: var(--app-dark-background);
-    font-size: 16px;
-    color:#fff;
+.converters-container {
+    display: grid;
+    place-items: center;
 }
 
-.input{
-    margin-top: 15px;
+.block {
+    margin: 50px 0;
+    width: 450px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.enter-box{
     gap: 15px;
-
-    #input-box {
-        width: 300px;
-        height: 50px;
-        border-radius: 10px;
-        padding-left: 10px;
-        background-color: var(--app-light-background);
-        border-color: var(--app-output-background);
-        border-style: solid;
-    }
-
-    #calculate {
-        width: 100px;
-        height: 50px;
-        background-color: var(--app-header-background);
-        color: #fff;
-        font-size: 16px;
-        border-radius: 10px;
-    }
 }
 
-.choice {
+.temp-input, .length-input, .area-input, .weight-input {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: var(--app-light-background);
+    border: 1px solid var(--app-light-background);
+}
+
+.temp-input:focus, .length-input:focus, .area-input:focus, .weight-input:focus {
+    border: 1px solid var(--app-dark-background);
+}
+
+
+.temp-convert, .length-convert, .area-convert, .weight-convert {
+    width: 100px;
+    height: 50px;
+    background-color: var(--app-button-background);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.temp-convert:hover, .length-convert:hover, .area-convert:hover, .weight-convert:hover {
+    background-color: var(--app-button-hover-background);
+    transition: ease-in-out 0.25s;
+}
+
+.temp-choice, .length-choice, .area-choice, .weight-choice {
     margin-top: 15px;
-    gap: 25px;
+    gap: 30px;
 }
 
-.output {
-    margin-top: 25px;
+.temp-output, .length-output, .area-output, .weight-output {
+    margin-top: 15px;
     width: 415px;
     height: 50px;
     background-color: var(--app-output-background);
     border-radius: 10px;
     padding-left: 10px;
     line-height: 50px;
-
-    input {
-        background-color: var(--app-output-background);
-    }
+    cursor: not-allowed;
 }
