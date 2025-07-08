@@ -17,13 +17,16 @@
     <script src="./assets/js/index.js" defer></script>
   </head>
   <body class="theme">
-    <main class="container grid">
+    <header>
+      <h1 class="title">Unit Converters</h1>
+    </header>
+    <main class="container">
       <section class="converters-container">
-        <section class="block grid">
+        <div class="block">
           <h2>℉ <--> ℃</h2>
           <form>
               <div class="enter-box flex">
-                <input id="enter-temp" class="temp-input" type="text" placeholder="Please enter a temperature value">
+                <input id="enter-temp" class="temp-input" type="text" placeholder="Please enter a value">
                 <input id="temp-button" class="temp-convert" type="button" value="Convert">
               </div>
               <div class="temp-choice flex">
@@ -36,16 +39,18 @@
                     <label id="fah-label" for="fah">To ℉</label>
                 </div>
               </div>
-              <input id="result-temp" class="temp-output" type="text"  
-              placeholder="Result will appear here" 
-              readonly>
+              <div class="result-box">
+                <input id="result-temp" class="temp-output" type="text"  
+                placeholder="Result will appear here" 
+                readonly>
+              </div>
           </form>
-        </section>
-        <section class="block grid">
+        </div>
+        <div class="block">
           <h2>inch <--> cm</h2>
           <form>
               <div class="enter-box flex">                
-                <input id="enter-length" class="length-input" type="text" placeholder="Please enter a length value">
+                <input id="enter-length" class="length-input" type="text" placeholder="Please enter a value">
                 <input id="length-button" class="length-convert" type="button" value="Convert">
               </div>
               <div class="length-choice flex">
@@ -62,12 +67,14 @@
               placeholder="Result will appear here" 
               readonly>
           </form>
-        </section>
-        <section class="block grid">
+        </div>
+      </section>
+      <section class="converters-container">
+        <div class="block">
           <h2>ft² <--> m²</h2>
           <form>
               <div class="enter-box flex">                
-                <input id="enter-area" class="area-input" type="text" placeholder="Please enter a area value">
+                <input id="enter-area" class="area-input" type="text" placeholder="Please enter a value">
                 <input id="area-button" class="area-convert" type="button" value="Convert">
               </div>
               <div class="area-choice flex">
@@ -84,12 +91,12 @@
               placeholder="Result will appear here" 
               readonly>
           </form>
-        </section>
-        <section class="block grid">
+        </div>
+        <div class="block">
           <h2>lb <--> kg</h2>
           <form>
               <div class="enter-box flex">                
-                <input id="enter-weight" class="weight-input" type="text" placeholder="Please enter a weight value">
+                <input id="enter-weight" class="weight-input" type="text" placeholder="Please enter a value">
                 <input id="weight-button" class="weight-convert" type="button" value="Convert">
               </div>
               <div class="weight-choice flex">
@@ -106,8 +113,13 @@
               placeholder="Result will appear here" 
               readonly>
           </form>
-        </section>
+        </div>
       </section>
     </main>
+    <footer>
+      <div class="footer">
+        <p>&copy; 2024 DUAN WANG | All Rights Reserved</p>
+      </div>
+    </footer>
   </body>
 </html>
