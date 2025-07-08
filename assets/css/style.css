@@ -7,7 +7,9 @@
 }
   
 body {
-    background-color: var(--app-light-background);
+    background: var(--app-light-background)
+    url(../img/background.gif)
+    center center / cover no-repeat; 
 }
 
 /*--------------------------------------------*/
@@ -30,29 +32,6 @@ body {
 
 .space {
     justify-content: space-between;
-}
-
-/*--------------------------------------------*/
-/*Header                                      */
-/*--------------------------------------------*/
-
-header {
-    height: 72px;
-    align-items: center;
-    line-height: 72px;
-    color: var(--app-button-background);
-    background-color: #fff;
-
-    h1 {
-        font-size: 25px;
-    }
-    
-    a {
-        color: #fff;
-        text-decoration-line: none;
-        font-size: 20px;
-        padding: 0 20px;
-    }
 }
 
 /*--------------------------------------------*/
