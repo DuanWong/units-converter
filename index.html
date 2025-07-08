@@ -7,7 +7,7 @@
     <meta name="description" content="My web project">
     <meta name="keyword" content="html, css, web, seo, web development">
     <title>Unit Converters</title>
-    <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./assets/img/favicon.webp" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" media="all">
     <link rel="stylesheet" href="./assets/css/style.css" media="all">
@@ -23,7 +23,7 @@
     <main class="container">
       <section class="converters-container">
         <div class="block">
-          <h2>℉ <--> ℃</h2>
+          <h2>℉ <i class="fa-solid fa-arrows-left-right"></i> ℃</h2>
           <form>
               <div class="enter-box flex">
                 <input id="enter-temp" class="temp-input" type="text" placeholder="Please enter a value">
@@ -32,11 +32,11 @@
               <div class="temp-choice flex">
                 <div>
                   <input id="cel" type="radio" name="temp-unit" value="to-cel" checked>
-                  <label id="cel-label" for="cel">To ℃</label>
+                  <label id="cel-label" for="cel">℉ to ℃</label>
                 </div>
                 <div>
                     <input id="fah" type="radio" name="temp-unit" value="to-fah">
-                    <label id="fah-label" for="fah">To ℉</label>
+                    <label id="fah-label" for="fah">℃ to ℉</label>
                 </div>
               </div>
               <div class="result-box">
@@ -47,7 +47,7 @@
           </form>
         </div>
         <div class="block">
-          <h2>inch <--> cm</h2>
+          <h2>inch <i class="fa-solid fa-arrows-left-right"></i> cm</h2>
           <form>
               <div class="enter-box flex">                
                 <input id="enter-length" class="length-input" type="text" placeholder="Please enter a value">
@@ -56,11 +56,11 @@
               <div class="length-choice flex">
                 <div>
                     <input id="cm" type="radio" name="length-unit" value="to-cm" checked>
-                    <label id="cm-label" for="cm">To cm</label>
+                    <label id="cm-label" for="cm">inch to cm</label>
                 </div>
                 <div>
                     <input id="inch" type="radio" name="length-unit" value="to-inch">
-                    <label id="inch-label" for="inch">To inch</label>
+                    <label id="inch-label" for="inch">cm to inch</label>
                 </div>
               </div>
               <input id="result-length" class="length-output" type="text"  
@@ -71,7 +71,7 @@
       </section>
       <section class="converters-container">
         <div class="block">
-          <h2>ft² <--> m²</h2>
+          <h2>ft² <i class="fa-solid fa-arrows-left-right"></i> m²</h2>
           <form>
               <div class="enter-box flex">                
                 <input id="enter-area" class="area-input" type="text" placeholder="Please enter a value">
@@ -80,11 +80,11 @@
               <div class="area-choice flex">
                 <div>
                     <input id="square-meters" type="radio" name="area-unit" value="to-square-meters" checked>
-                    <label id="square-meters-label" for="square-meters">To m²</label>
+                    <label id="square-meters-label" for="square-meters">ft² to m²</label>
                 </div>
                 <div>
                     <input id="square-foot" type="radio" name="area-unit" value="to-square-foot">
-                    <label id="square-foot-label" for="square-foot">To ft²</label>
+                    <label id="square-foot-label" for="square-foot">m² to ft²</label>
                 </div>
               </div>
               <input id="result-area" class="area-output" type="text"  
@@ -93,7 +93,7 @@
           </form>
         </div>
         <div class="block">
-          <h2>lb <--> kg</h2>
+          <h2>lb <i class="fa-solid fa-arrows-left-right"></i> kg</h2>
           <form>
               <div class="enter-box flex">                
                 <input id="enter-weight" class="weight-input" type="text" placeholder="Please enter a value">
@@ -102,11 +102,11 @@
               <div class="weight-choice flex">
                 <div>
                     <input id="kg" type="radio" name="weight-unit" value="to-kg" checked>
-                    <label id="kg-label" for="kg">To kg</label>
+                    <label id="kg-label" for="kg">lb to kg</label>
                 </div>
                 <div>
                     <input id="lb" type="radio" name="weight-unit" value="to-lb">
-                    <label id="lb-label" for="lb">To lb</label>
+                    <label id="lb-label" for="lb">kg to lb</label>
                 </div>
               </div>
               <input id="result-weight" class="weight-output" type="text"  

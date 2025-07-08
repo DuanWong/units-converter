@@ -43,11 +43,14 @@ tempConvert.addEventListener('click', function() {
     if (isNumberTemp(a) && selectedValue === 'to-fah') {
         let result = a * 1.8 + 32;
         tempOutput.value = `${a} ℃ = ${result.toFixed(2)} ℉`;
+        tempOutput.style.color = 'black';
     } else if (isNumberTemp(a) && selectedValue === 'to-cel') {
         let result = (a - 32) / 1.8;
         tempOutput.value = `${a} ℉ = ${result.toFixed(2)} ℃`;
+        tempOutput.style.color = 'black';
     } else {
         tempOutput.value = 'Please enter a valid number';
+        tempOutput.style.color = 'red';
     }
 
     tempInput.value = '';
@@ -80,11 +83,14 @@ lengthConvert.addEventListener('click', function() {
     if (isNumber(a) && selectedValue === 'to-cm') {
         let result = a * 2.54;
         lengthOutput.value = `${a} inch = ${result.toFixed(2)} cm`;
+        lengthOutput.style.color = 'black';
     } else if (isNumber(a) && selectedValue === 'to-inch') {
         let result = a * 0.3937;
         lengthOutput.value = `${a} cm = ${result.toFixed(2)} inch`;
+        lengthOutput.style.color = 'black';
     } else {
         lengthOutput.value = 'Please enter a valid number';
+        lengthOutput.style.color = 'red';
     }
 
     lengthInput.value = '';
@@ -117,11 +123,14 @@ areaConvert.addEventListener('click', function() {
     if (isNumber(a) && selectedValue === 'to-square-meters') {
         let result = a * 0.092903;
         areaOutput.value = `${a} ft² = ${result.toFixed(2)} m²`;
+        areaOutput.style.color = 'black';
     } else if (isNumber(a) && selectedValue === 'to-square-foot') {
         let result = a * 10.7639;
         areaOutput.value = `${a} m² = ${result.toFixed(2)} ft²`;
+        areaOutput.style.color = 'black';
     } else {
         areaOutput.value = 'Please enter a valid number';
+        areaOutput.style.color = 'red';
     }
 
     areaInput.value = '';
@@ -154,11 +163,14 @@ weightConvert.addEventListener('click', function() {
     if (isNumber(a) && selectedValue === 'to-kg') {
         let result = a * 0.45359237;
         weightOutput.value = `${a} lb = ${result.toFixed(2)} kg`;
+        weightOutput.style.color = 'black';
     } else if (isNumber(a) && selectedValue === 'to-lb') {
         let result = a * 2.20462;
         weightOutput.value = `${a} kg = ${result.toFixed(2)} lb`;
+        weightOutput.style.color = 'black';
     } else {
         weightOutput.value = 'Please enter a valid number';
+        weightOutput.style.color = 'red';
     }
 
     weightInput.value = '';

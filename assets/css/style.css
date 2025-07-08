@@ -1,9 +1,9 @@
 :root {
     --app-dark-background: #181721;
-    --app-light-background: #efedf5;
-    --app-button-background: #6b4de3;
-    --app-button-hover-background: #866fe4;
-    --app-output-background: #dfdee3;
+    --app-light-background: #f1f2f3;
+    --app-button-background: #77e0d2;
+    --app-button-hover-background: #a3e4db;
+    --app-input-background: #ffdbd9;
 }
   
 body {
@@ -96,9 +96,10 @@ header {
     width: 25%;
     height: 50px;
     background-color: var(--app-button-background);
-    color: #fff;
+    color: #000;
     font-size: 16px;
     border-radius: 10px;
+    font-weight: 500;
 }
 
 .temp-convert:hover, .length-convert:hover, .area-convert:hover, .weight-convert:hover {
@@ -119,7 +120,7 @@ header {
     margin-top: 15px;
     width: 100%;
     height: 50px;
-    background-color: var(--app-output-background);
+    background-color: var(--app-light-background);
     border-radius: 10px;
     padding-left: 10px;
     line-height: 50px;
