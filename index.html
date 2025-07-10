@@ -21,104 +21,107 @@
       <h1 class="title">Unit Converters</h1>
     </header>
     <main class="container">
-      <section class="converters-container">
-        <div class="block">
-          <h2>℉ <i class="fa-solid fa-arrows-left-right"></i> ℃</h2>
-          <form>
-              <div class="enter-box flex">
-                <input id="enter-temp" class="temp-input" type="text" placeholder="Please enter a value">
-                <input id="temp-button" class="temp-convert" type="button" value="Convert">
-              </div>
-              <div class="temp-choice flex">
-                <div>
-                  <input id="cel" type="radio" name="temp-unit" value="to-cel" checked>
-                  <label id="cel-label" for="cel">℉ to ℃</label>
+      <div class="converters-container">
+        <section class="converters-row">
+          <div class="block">
+            <h2>℉ <i class="fa-solid fa-arrows-left-right"></i> ℃</h2>
+            <form>
+                <div class="enter-box flex">
+                  <input id="enter-temp" class="temp-input" type="text" placeholder="Please enter a value">
+                  <input id="temp-button" class="temp-convert" type="button" value="Convert">
                 </div>
-                <div>
-                    <input id="fah" type="radio" name="temp-unit" value="to-fah">
-                    <label id="fah-label" for="fah">℃ to ℉</label>
+                <div class="temp-choice flex">
+                  <div>
+                    <input id="cel" type="radio" name="temp-unit" value="to-cel" checked>
+                    <label id="cel-label" for="cel">℉ to ℃</label>
+                  </div>
+                  <div>
+                      <input id="fah" type="radio" name="temp-unit" value="to-fah">
+                      <label id="fah-label" for="fah">℃ to ℉</label>
+                  </div>
                 </div>
-              </div>
-              <div class="result-box">
-                <input id="result-temp" class="temp-output" type="text"  
+                <div class="result-box">
+                  <input id="result-temp" class="temp-output" type="text"  
+                  placeholder="Result will appear here" 
+                  readonly>
+                </div>
+            </form>
+          </div>
+          <div class="block">
+            <h2>inch <i class="fa-solid fa-arrows-left-right"></i> cm</h2>
+            <form>
+                <div class="enter-box flex">                
+                  <input id="enter-length" class="length-input" type="text" placeholder="Please enter a value">
+                  <input id="length-button" class="length-convert" type="button" value="Convert">
+                </div>
+                <div class="length-choice flex">
+                  <div>
+                      <input id="cm" type="radio" name="length-unit" value="to-cm" checked>
+                      <label id="cm-label" for="cm">inch to cm</label>
+                  </div>
+                  <div>
+                      <input id="inch" type="radio" name="length-unit" value="to-inch">
+                      <label id="inch-label" for="inch">cm to inch</label>
+                  </div>
+                </div>
+                <input id="result-length" class="length-output" type="text"  
                 placeholder="Result will appear here" 
                 readonly>
-              </div>
-          </form>
-        </div>
-        <div class="block">
-          <h2>inch <i class="fa-solid fa-arrows-left-right"></i> cm</h2>
-          <form>
-              <div class="enter-box flex">                
-                <input id="enter-length" class="length-input" type="text" placeholder="Please enter a value">
-                <input id="length-button" class="length-convert" type="button" value="Convert">
-              </div>
-              <div class="length-choice flex">
-                <div>
-                    <input id="cm" type="radio" name="length-unit" value="to-cm" checked>
-                    <label id="cm-label" for="cm">inch to cm</label>
+            </form>
+          </div>
+        </section>
+        <section class="converters-row">
+          <div class="block">
+            <h2>ft² <i class="fa-solid fa-arrows-left-right"></i> m²</h2>
+            <form>
+                <div class="enter-box flex">                
+                  <input id="enter-area" class="area-input" type="text" placeholder="Please enter a value">
+                  <input id="area-button" class="area-convert" type="button" value="Convert">
                 </div>
-                <div>
-                    <input id="inch" type="radio" name="length-unit" value="to-inch">
-                    <label id="inch-label" for="inch">cm to inch</label>
+                <div class="area-choice flex">
+                  <div>
+                      <input id="square-meters" type="radio" name="area-unit" value="to-square-meters" checked>
+                      <label id="square-meters-label" for="square-meters">ft² to m²</label>
+                  </div>
+                  <div>
+                      <input id="square-foot" type="radio" name="area-unit" value="to-square-foot">
+                      <label id="square-foot-label" for="square-foot">m² to ft²</label>
+                  </div>
                 </div>
-              </div>
-              <input id="result-length" class="length-output" type="text"  
-              placeholder="Result will appear here" 
-              readonly>
-          </form>
-        </div>
-      </section>
-      <section class="converters-container">
-        <div class="block">
-          <h2>ft² <i class="fa-solid fa-arrows-left-right"></i> m²</h2>
-          <form>
-              <div class="enter-box flex">                
-                <input id="enter-area" class="area-input" type="text" placeholder="Please enter a value">
-                <input id="area-button" class="area-convert" type="button" value="Convert">
-              </div>
-              <div class="area-choice flex">
-                <div>
-                    <input id="square-meters" type="radio" name="area-unit" value="to-square-meters" checked>
-                    <label id="square-meters-label" for="square-meters">ft² to m²</label>
+                <input id="result-area" class="area-output" type="text"  
+                placeholder="Result will appear here" 
+                readonly>
+            </form>
+          </div>
+          <div class="block">
+            <h2>lb <i class="fa-solid fa-arrows-left-right"></i> kg</h2>
+            <form>
+                <div class="enter-box flex">                
+                  <input id="enter-weight" class="weight-input" type="text" placeholder="Please enter a value">
+                  <input id="weight-button" class="weight-convert" type="button" value="Convert">
                 </div>
-                <div>
-                    <input id="square-foot" type="radio" name="area-unit" value="to-square-foot">
-                    <label id="square-foot-label" for="square-foot">m² to ft²</label>
+                <div class="weight-choice flex">
+                  <div>
+                      <input id="kg" type="radio" name="weight-unit" value="to-kg" checked>
+                      <label id="kg-label" for="kg">lb to kg</label>
+                  </div>
+                  <div>
+                      <input id="lb" type="radio" name="weight-unit" value="to-lb">
+                      <label id="lb-label" for="lb">kg to lb</label>
+                  </div>
                 </div>
-              </div>
-              <input id="result-area" class="area-output" type="text"  
-              placeholder="Result will appear here" 
-              readonly>
-          </form>
-        </div>
-        <div class="block">
-          <h2>lb <i class="fa-solid fa-arrows-left-right"></i> kg</h2>
-          <form>
-              <div class="enter-box flex">                
-                <input id="enter-weight" class="weight-input" type="text" placeholder="Please enter a value">
-                <input id="weight-button" class="weight-convert" type="button" value="Convert">
-              </div>
-              <div class="weight-choice flex">
-                <div>
-                    <input id="kg" type="radio" name="weight-unit" value="to-kg" checked>
-                    <label id="kg-label" for="kg">lb to kg</label>
-                </div>
-                <div>
-                    <input id="lb" type="radio" name="weight-unit" value="to-lb">
-                    <label id="lb-label" for="lb">kg to lb</label>
-                </div>
-              </div>
-              <input id="result-weight" class="weight-output" type="text"  
-              placeholder="Result will appear here" 
-              readonly>
-          </form>
-        </div>
-      </section>
+                <input id="result-weight" class="weight-output" type="text"  
+                placeholder="Result will appear here" 
+                readonly>
+            </form>
+          </div>
+        </section>
+      </div>
+      
     </main>
     <footer>
       <div class="footer">
-        <p>&copy; 2024 DUAN WANG | All Rights Reserved</p>
+        <p>&copy; 2024 Duan Wang</p>
       </div>
     </footer>
   </body>
